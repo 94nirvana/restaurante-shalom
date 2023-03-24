@@ -1,0 +1,83 @@
+{% load bootstrap4 %}
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">שִׂגשׂוּג</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'fila' %}">Acesso</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'transferencia' %}">Transferencias</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <h1 class="container"># Shalom # LeChaim #</h1>
+    <br>
+    <div class="container">Era uma vez um pequeno restaurante de comida judaica localizado no coração da cidade de Tel Aviv, em Israel. O nome do restaurante era "Shalom", que significa "paz" em hebraico. O restaurante era gerenciado por uma família judia que se orgulhava de suas tradições culinárias e culturais.
+
+O restaurante tinha um menu completo de pratos tradicionais judaicos, como falafel, schnitzel de frango, shakshuka, kugel e hummus. Além disso, o restaurante servia pratos especiais de festividades judaicas, como challah, kreplach e matzá ball soup.
+
+A decoração do restaurante também era única e especial. As paredes eram decoradas com fotos e pinturas de Jerusalém e outros locais sagrados em Israel. Havia também uma lâmpada de azeite queimando constantemente em um candelabro no centro do restaurante, como símbolo da tradição judaica.
+
+Os proprietários do restaurante, um casal de idosos, contavam histórias sobre as tradições judaicas enquanto serviam os clientes. Eles explicavam como cada prato era feito, qual era a origem dele e como era importante na cultura judaica.
+
+    </div>
+    <br>
+    <div class="container"><i>Um dia, uma família de turistas americanos entrou no restaurante em busca de uma refeição autêntica e com sabor de Israel. Eles ficaram encantados com o ambiente aconchegante do restaurante e a comida deliciosa.
+
+Enquanto saboreavam o schnitzel de frango e o hummus, a família americana começou a fazer perguntas sobre as tradições judaicas e a história de Israel. Os proprietários do restaurante estavam felizes em compartilhar suas histórias e conhecimentos, e a conversa se estendeu por horas.
+
+Depois de terminar a refeição, a família americana ficou emocionada com a experiência que tiveram no restaurante. Eles elogiaram a comida e a hospitalidade dos proprietários e disseram que a visita ao restaurante foi o ponto alto de sua viagem a Israel.
+
+O restaurante Shalom continuou a receber clientes de todo o mundo, todos em busca de uma autêntica experiência de comida judaica e tradições culturais. Eles deixavam o restaurante com o coração cheio de paz e um sabor delicioso em suas bocas.
+    </i></div>
+    <br>
+    <br>
+    <div class="container">
+        <h2># Menu # תַפרִיט #</h2>
+        <br>
+        <ol>
+            <li><b>Falafel</b> - bolinhos fritos de grão de bico com especiarias e ervas.</li>
+            <li><b>Hummus</b> - pasta cremosa de grão de bico, alho e tahini.</li>
+            <li><b>Shakshuka</b> - ovos pochê em molho de tomate e pimentão.</li>
+            <li><b>Sabich</b> - sanduíche de pão pita com berinjela frita, ovo, tahini e salada.</li>
+            <li><b>Schnitzel</b> - frango ou carne empanados e fritos.</li>
+            <li><b>Kebab</b> - espetinhos de carne, geralmente de cordeiro ou frango.</li>
+            <li><b>Bourekas</b> - pastéis recheados com queijo, batata ou espinafre.</li>
+            <li><b>Kugel</b> - pudim de macarrão doce com passas.</li>
+            <li><b>Matbucha</b> - salada de pimentão vermelho assado, tomate e alho.</li>
+            <li><b>Sambusak</b> - pastéis de massa folhada recheados com carne ou queijo.</li>
+            <li><b>Kubbeh</b> - bolinhos de trigo recheados com carne moída.</li>
+            <li><b>Malabi</b> - sobremesa de pudim de leite com xarope de rosas.</li>
+            <li><b>Lachuch</b> - panquecas finas e esponjosas de fermento com mel e manteiga.</li>
+            <li><b>Meze</b> - seleção de pratos pequenos e variados, como falafel, hummus e salada.</li>
+            <li><b>Arayes</b> - sanduíches de pão pita recheados com carne moída.</li>
+            <li><b>Shawarma</b> - carne fatiada cozida em um espeto vertical, geralmente servido em pão pita.</li>
+            <li><b>Jerusalem mixed grill</b> - prato de carne grelhada mista (cordeiro, frango e fígado) com cebolas e especiarias.</li>
+            <li><b>Cholent</b> - ensopado cozido lentamente com carne, batatas e grãos.</li>
+            <li><b>Malawach</b> - pão folhado frito em óleo com recheio de ovo e molho de tomate.</li>
+            <li><b>Jachnun</b> - pão folhado frito lentamente durante a noite, geralmente servido com molho de iogurte ou tomate.</li>
+        </ol>
+    </div>
+</body>
+</html>

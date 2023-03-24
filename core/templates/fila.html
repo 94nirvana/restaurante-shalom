@@ -1,0 +1,72 @@
+{% load bootstrap4 %}
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acesso</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">שִׂגשׂוּג</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'fila' %}">Acesso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'transferencia' %}">Transferencias</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1 class="container">Shalom - LeChaim!</h1>
+    <div class="container">
+        <br>
+        <h2>Controle de Acesso</h2>
+        {% bootstrap_messages %}
+
+        <form action="{% url 'fila' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            {% endbuttons %}
+        </form>
+    </div>
+        <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Pessoas</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Preferencial</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+                  <tr>
+                      <td scope="row">{{cliente.nome}}</td>
+                      <td scope="row">{{cliente.quantidade}}</td>
+                      <td scope="row">{{cliente.codigo}}</td>
+                      <td scope="row">{{cliente.preferencia}}</td>
+                  </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+{% bootstrap_javascript jquery="full" %}
+</body>
+</html>
